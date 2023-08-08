@@ -58,7 +58,7 @@ const CreateNote: React.FC<ICreateNoteProps> = ({ addNotes }) => {
 
   const onCreateNote = () => {
     if (!note.title && !note.details) {
-      setError("All fields are mandatory");
+      setError("タイトルか詳細を記入してください!");
       return;
     }
     addNotes({ ...note, id: uuid() });
